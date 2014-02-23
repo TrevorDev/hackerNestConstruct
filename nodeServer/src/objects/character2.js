@@ -15,12 +15,10 @@ function Character(x, y, width, height, spritePath){
 			this.sprite.texture = this.texture_middle;
 		}
 		else if(command == "left"){ //change sprite lean left
-			//this.sprite.texture = this.texture_right;
-			//this.sprite.scale.x = -1;
+			this.sprite.texture = this.texture_left;
 		}
 		else if(command == "right"){ //change sprite lean right
-			//this.sprite.texture = this.texture_right;
-			//this.sprite.scale.x = 1;
+			this.sprite.texture = this.texture_right;
 			
 		}else{ //HEADBUT THAT SHIT!!
 			this.sprite.texture = this.texture_butt;
@@ -41,9 +39,10 @@ function Character(x, y, width, height, spritePath){
 	}
 
 	this.position = 0
-	this.texture_middle= new PIXI.Texture.fromImage(spritePath+'/Head.png');
-	this.texture_right = new PIXI.Texture.fromImage(spritePath+'/Right.png');
-	this.texture_butt = new PIXI.Texture.fromImage(spritePath+'/Butt.png');
+	this.texture_middle= new PIXI.Texture.fromImage(spritePath+'/HeadHD.png');
+	this.texture_right = new PIXI.Texture.fromImage(spritePath+'/RightHD.png');
+	this.texture_left = new PIXI.Texture.fromImage(spritePath+'/LeftHD.png');
+	this.texture_butt = new PIXI.Texture.fromImage(spritePath+'/ButtHD.png');
 
 	this.sprite = new PIXI.Sprite(this.texture_middle);
 	global.screen.container.addChild(this.sprite);
