@@ -29,11 +29,37 @@ var getStreetViewImage = function (what, where) {
     }
   });
 }
+var getLookAhead = function(str){
+  var requestUrl = "http://api.sandbox.yellowapi.com//GetTypeAhead/?text=" + str + "&lang=en&fmt=json&field=WHAT&apikey=xsdm6nnbkfwecmqjwbdeguhp&UID=1"
+  //'http://api.sandbox.yellowapi.com/GetTypeAhead/?text=' +str+'&lang=en&field=WHAT&apikey=xsdm6nnbkfwecmqjwbdeguhp&UID=1'; 
+ 
+  $.ajax({
+    url: requestUrl,
+    type: "GET",
+    async: true,
+    success: function(response, textStatus, jqXHR) {
+      console.log(response);
+      console.log(response.suggestedValues[0].value);
+
+     /* if (response.listings.length == 1)
+      {
+        
+      }*/
+    },
+    error:function(jqXHR, textStatus, errorThrown) {
+      console.log(errorThrown);
+    }
+  });
+
+
+}
  $( '#what' )
   .bind('input propertychange', function () {
     var str = "";
     str += $( this ).val().trim() + " ";
-    alert( str );
+   // alert( str );
+     getLookAhead(str);
+    
   })
   .change();
 //  this above is almost what we want for calling /GetTypeAhead YELLOWAPI 
