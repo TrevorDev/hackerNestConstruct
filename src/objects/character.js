@@ -54,6 +54,8 @@ function Character(x, y, width, height, spritePath, controller){
 	}
 
 	this.move = function(){
+		//console.log(Kiwi.xSpd);
+		//this.xSpd = Kiwi.xSpd;
 		this.ySpd+= global.currentLevel.gravity;
 		this.x+=this.xSpd;
 		this.x+=this.checkWallCollision(this.xSpd, 0);

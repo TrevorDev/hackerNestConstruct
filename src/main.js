@@ -22,6 +22,7 @@ function resize()
 	global.stats.domElement.style.top = h + "px";
 	
 	global.screen.renderer.resize(width, height);
+	$('canvas').height = 100;
 }
 
 function update()
