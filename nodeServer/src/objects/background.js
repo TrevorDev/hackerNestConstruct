@@ -1,4 +1,4 @@
-function Wall(x, y, width, height, spritePath){
+function Background(x, y, width, height, spritePath){
 	this.setPos = function(x,y){
 		this.x = x;
 		this.y = y;
