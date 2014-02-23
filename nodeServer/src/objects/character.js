@@ -13,16 +13,23 @@ function Character(x, y, width, height, spritePath, ai){
 		}
 		else if(command == "right"){ //change sprite lean right
 			this.sprite.texture = this.texture_right;
-			
 		} else{ //HEADBUT THAT DUDE!!
 			this.sprite.alpha = 1;
 			this.sprite.texture = this.texture_butt;
+			if(global.char_player.position == "left" || global.char_computer.position == "left")
+				new Effect('dodgeleft.png');
+			else if (global.char_player.position == "right" || global.char_computer.position == "right")
+				new Effect('dodgeright.png');
 			if (ai){
-				if (global.char_player.position == "middle")
+				if (global.char_player.position == "middle"){
 					global.hp_player.frameAction();
+					new Effect('bloodred.png');
+				}
 			} else {
-				if (global.char_computer.position == "middle")
+				if (global.char_computer.position == "middle"){
 					global.hp_computer.frameAction();
+					new Effect('bloodblue.png');
+				}
 			}
 
 		}

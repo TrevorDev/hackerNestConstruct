@@ -1,4 +1,4 @@
-function Effect(width, height, effect) {
+function Effect(effect) {
 	
 
 	this.setPos = function(x,y){
@@ -16,8 +16,11 @@ function Effect(width, height, effect) {
 
 	this.tryRemove = function(){
 		now = new Date().getTime() / 1000;
-		if (created-now >1.0)
-			global.screen.container.addChild(this.sprite);
+		age = now-this.created;
+		this.sprite.alpha = 1-age
+		if (age > 1.0)
+			return true;
+		return false;
 	}
 	
 	this.created = new Date().getTime() / 1000;
@@ -26,15 +29,15 @@ function Effect(width, height, effect) {
 	this.sprite = new PIXI.Sprite(this.texture);
 
 	if (effect == 'dodgeright' || effect == 'dodgeleft'){
-		this.setPos(this.sprite,config.width/2-175,config.height/2-175);
-		this.setDim(this.sprite,350,350);
+		this.setPos(config.width/2-175,config.height/2-175);
+		this.setDim(350,350);
 	} else {
-		this.setDim(this.sprite,config.width,config.height);
+		this.setDim(config.width,config.height);
 	}
 
 
 	global.screen.container.addChild(this.sprite);
-	effects.push(this.self);
+	effects.push(this);
 }
 
-effects = [];
+var effects = [];

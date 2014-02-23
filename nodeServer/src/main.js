@@ -38,14 +38,19 @@ function update()
 		else
 			global.char_computer.frameAction("middle");
 	}
-	global.screen.render();
-	if (!global.finished)
+	if (!global.finished){
+		for (var x=0;x<effects.length;x++){
+			if (effects[x].tryRemove())
+				effects.splice(x,1);
+		}
 		requestAnimFrame(update);
+	}
 	else {
-		this.global.end_game.frameAction(""); //force select default option
+		this.global.end_game.frameAction("");
 		if (global.hp_player.health == 0)
 			this.global.end_game.score("lose");
 		else if (global.hp_computer.health == 0)
 			this.global.end_game.score("win");
 	}
+	global.screen.render();
 }
