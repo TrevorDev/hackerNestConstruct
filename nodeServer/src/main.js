@@ -43,11 +43,9 @@ function update()
 		requestAnimFrame(update);
 	else {
 		this.global.end_game.frameAction(""); //force select default option
-		if (global.hp_player.health == 0){
+		if (global.hp_player.health == 0)
 			this.global.end_game.score("lose");
-		}
-		else if (global.hp_computer.health == 0){
+		else if (global.hp_computer.health == 0)
 			this.global.end_game.score("win");
-		}
 	}
 }

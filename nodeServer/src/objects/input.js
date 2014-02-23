@@ -13,6 +13,10 @@ var Controller = function(keys){
 	};
 	this.keyDown = function(key){
 		this.keys[key][1]=true;
+		if (!global.finished)
+                global.char_player.frameAction(key);
+            else
+                global.end_game.frameAction(key);
 	};
 	this.getKey = function(key){
 		return this.keys[key][1];

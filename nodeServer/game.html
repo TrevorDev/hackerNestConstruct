@@ -15,11 +15,15 @@
 
         });
     </script>
+        <audio id="audiotag" src="/assets/sound/mk.wav" preload="metadata"></audio>
+        
         <!-- VENDOR -->
         <script src="src/libs/jquery.js"></script>
         <script src="src/libs/pixi.js"></script>
+        <script src="src/libs/keypress.js"></script>
 
         <!-- OBJECTS -->
+        <script src="src/objects/input.js"></script>
         <script src="src/objects/screen.js"></script>
         <script src="src/objects/wall.js"></script>
         <script src="src/objects/background.js"></script>
@@ -33,6 +37,22 @@
         <script src="src/libs/config.js"></script>
         <script src="src/libs/global.js"></script>
         <script src="src/libs/init.js"></script>
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            console.log(document.getElementById('audiotag').duration)
+            //document.getElementById('audiotag').load();
+            console.log(document.getElementById('audiotag').play());
+        })
+            /*var audio = new Audio('/assets/sound/mk.mp3');
+            audio.onload = function(){
+                console.log("hits")
+            }
+            audio.load();
+            console.log(audio)
+            audio.play();*/
+            
+        </script>
 
 
         <!-- MAIN -->
