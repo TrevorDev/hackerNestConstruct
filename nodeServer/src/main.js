@@ -24,7 +24,7 @@ function resize()
 
 function update()
 {
-	global.character.frameAction(1);
+	//global.character.frameAction(0);
 	global.screen.render();
 	requestAnimFrame(update);
 }

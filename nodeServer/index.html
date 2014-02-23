@@ -7,7 +7,8 @@
     <script>
         var socket = io.connect('/');
         socket.on('kiwi', function (data) {
-            console.log(data);
+            global.character.frameAction(data);
+
         });
     </script>
         <!-- VENDOR -->
