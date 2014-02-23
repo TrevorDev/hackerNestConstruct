@@ -13,7 +13,7 @@ module.exports = function() {
     
 
     config.udp_server.port = 4000;
-    config.udp_server.address = '192.168.0.104'
+    config.udp_server.address = '10.16.102.123'
 
     config.redis.uri = 'redis://localhost';
     config.redis.user = '';

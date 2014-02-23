@@ -18,17 +18,13 @@ function resize()
 	global.screen.renderer.view.style.left = $(window).width() / 2 - width/2 + "px"
 	global.screen.renderer.view.style.top = $(window).height() / 2 - height/2 + "px"
 	
-	global.stats.domElement.style.left = w + "px";
-	global.stats.domElement.style.top = h + "px";
-	
 	global.screen.renderer.resize(width, height);
 	$('canvas').height = 100;
 }
 
 function update()
 {
-	Character.frameAction();
+	global.character.frameAction(1);
 	global.screen.render();
 	requestAnimFrame(update);
-	//global.stats.end();
 }
