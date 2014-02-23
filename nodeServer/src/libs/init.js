@@ -12,8 +12,8 @@ function onReady()
 	if(getURLParameter("imageUrl")){
 		new Background(0, 0, config.width, config.height, getURLParameter("imageUrl"));
 	}
-	global.char_player = new Character(config.width/2-250, 100, 500, 500, "assets/characters/player");
-	//global.char_computer = new Character(config.width/2-250, 100, 500, 500, "assets/characters/computer");
+	//global.char_player = new Character(config.width/2-250, 100, 500, 500, "assets/characters/player", false);
+	global.char_computer = new Character(config.width/2-500, 100, 1000, 500, "assets/characters/computer");
 
 	resize();
 	requestAnimFrame(update);
