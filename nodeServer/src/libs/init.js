@@ -9,6 +9,13 @@ function onReady()
 {
 	global.screen = new Screen(800, 600);
 
+	var controllerA = new Controller({ 
+		left: "left",
+		right: "right",
+		head: "up",
+		middle: "down"
+	});
+
 	if(getURLParameter("imageUrl")){
 		new Background(0, 0, config.width, config.height, getURLParameter("imageUrl"));
 	}
