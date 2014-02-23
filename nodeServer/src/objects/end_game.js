@@ -37,8 +37,8 @@ function EndGame(player_win, spritePath){
 			this.setPos(this.sprite_again,config.width/2-125-150,config.height/2-125);
 			this.setPos(this.sprite_quit,config.width/2-125+150,config.height/2-125);
 
-			this.setDim(this.sprite_win,250,125);
-			this.setDim(this.sprite_lose,250,125);
+			this.setDim(this.sprite_win,250,105);
+			this.setDim(this.sprite_lose,250,105);
 			this.setDim(this.sprite_again,250,250);
 			this.setDim(this.sprite_quit,250,250);
 
