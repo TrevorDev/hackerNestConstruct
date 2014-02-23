@@ -27,10 +27,8 @@ function update()
 	var rand = Math.floor((Math.random()*10));
 	var speed = Math.random()+0.5;
 	var now = new Date().getTime() / 1000;
-	console.log(speed);
-	
+	resize();
 	if ((now - global.char_computer.updated) > speed){
-		//console.log(rand);
 		if (rand == 5)
 			global.char_computer.frameAction("head");
 		else if ((rand >= 7) && (rand <=9))
@@ -41,5 +39,19 @@ function update()
 			global.char_computer.frameAction("middle");
 	}
 	global.screen.render();
-	requestAnimFrame(update);
+	if (!global.finished)
+		requestAnimFrame(update);
+	else {
+		
+		if (global.hp_player.health == 0){
+			alert('You lose!');
+			document.location.href = '../';
+		}
+			//new EndGame(false, "assets/characters/computer");
+		else if (global.hp_computer.health == 0){
+			alert('You win, congratulations!');
+			document.location.href = '../';
+			//new EndGame(true, "assets/characters/computer");
+		}
+	}
 }

@@ -12,8 +12,10 @@ function onReady()
 	if(getURLParameter("imageUrl")){
 		new Background(0, 0, config.width, config.height, getURLParameter("imageUrl"));
 	}
-	//global.char_player = new Character(config.width/2-250, 100, 500, 500, "assets/characters/player", false);
-	global.char_computer = new Character(config.width/2-500, 100, 1000, 500, "assets/characters/computer");
+	global.char_computer = new Character(config.width/2-500, 100, 1000, 500, "assets/characters/computer", true);
+	global.char_player = new Character(config.width/2-500, 100, 1000, 500, "assets/characters/player", false);
+	global.hp_player = new Health(10, 5, 700, 350, "assets/characters/player/health");
+	global.hp_computer = new Health(config.width-700-10, 5, 700, 350, "assets/characters/computer/health");
 
 	resize();
 	requestAnimFrame(update);
