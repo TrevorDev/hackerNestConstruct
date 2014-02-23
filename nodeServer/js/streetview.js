@@ -29,17 +29,15 @@ var getStreetViewImage = function (what, where) {
     }
   });
 }
-/*
  $( '#what' )
-  .change(function () {
+  .bind('input propertychange', function () {
     var str = "";
     str += $( this ).val().trim() + " ";
     alert( str );
   })
   .change();
-  this above is almost what we want for calling /GetTypeAhead YELLOWAPI 
-  the only problem is that it only triggers this function when the element looses focus. 
-*/
+//  this above is almost what we want for calling /GetTypeAhead YELLOWAPI 
+//  the only problem is that it only triggers this function when the element looses focus. 
 $('#fight').click(function () {
   if ($('#what').val().trim() != '' && $('#where').val().trim() != '')
     getStreetViewImage($('#what').val().trim(), $('#where').val().trim());
