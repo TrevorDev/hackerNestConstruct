@@ -44,11 +44,10 @@ function update()
 	else {
 		this.global.end_game.frameAction(""); //force select default option
 		if (global.hp_player.health == 0){
-			alert('You lose!');
-
+			this.global.end_game.score("lose");
 		}
 		else if (global.hp_computer.health == 0){
-			alert('You win, congratulations!');
+			this.global.end_game.score("win");
 		}
 	}
 }
