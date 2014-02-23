@@ -108,4 +108,8 @@ function Character(x, y, width, height, spritePath, controller){
 	this.height;
 	this.setDim(width,height);
 	this.moveAcc = 0.2;
+
+	Character.array.push(this)
 }
+
+Character.array = []
