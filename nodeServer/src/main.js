@@ -42,16 +42,13 @@ function update()
 	if (!global.finished)
 		requestAnimFrame(update);
 	else {
-		
+		this.global.end_game.frameAction(""); //force select default option
 		if (global.hp_player.health == 0){
 			alert('You lose!');
-			document.location.href = '../';
+
 		}
-			//new EndGame(false, "assets/characters/computer");
 		else if (global.hp_computer.health == 0){
 			alert('You win, congratulations!');
-			document.location.href = '../';
-			//new EndGame(true, "assets/characters/computer");
 		}
 	}
 }

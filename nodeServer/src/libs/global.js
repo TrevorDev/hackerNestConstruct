@@ -6,5 +6,6 @@ var global = {
 	char_computer: null,
 	hp_player:null,
 	hp_computer:null,
+	end_game:null,
 	finished:false
 }

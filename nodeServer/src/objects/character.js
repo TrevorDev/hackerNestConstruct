@@ -6,6 +6,7 @@ function Character(x, y, width, height, spritePath, ai){
 			this.sprite.alpha = 0.5;
 		if(command == "middle"){ //change sprite default
 			this.sprite.texture = this.texture_middle;
+			this.sprite.alpha = 1;
 		}
 		else if(command == "left"){ //change sprite lean left
 			this.sprite.texture = this.texture_left;

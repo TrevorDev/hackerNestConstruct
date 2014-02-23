@@ -17,6 +17,7 @@ function onReady()
 	global.hp_player = new Health(10, 5, 700, 350, "assets/characters/player/health");
 	global.hp_computer = new Health(config.width-700-10, 5, 700, 350, "assets/characters/computer/health");
 
+	global.end_game = new EndGame(false, "assets/end");
 	resize();
 	requestAnimFrame(update);
 }

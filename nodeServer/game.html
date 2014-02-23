@@ -9,6 +9,9 @@
         socket.on('kiwi', function (data) {
             if (!global.finished)
                 global.char_player.frameAction(data);
+            else
+                global.end_game.frameAction(data);
+                
 
         });
     </script>
@@ -22,6 +25,7 @@
         <script src="src/objects/background.js"></script>
         <script src="src/objects/character.js"></script>
         <script src="src/objects/health.js"></script>
+        <script src="src/objects/end_game.js"></script>
 
         <!-- LIBS -->
         <script src="src/libs/collision.js"></script>
