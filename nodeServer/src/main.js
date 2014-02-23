@@ -21,13 +21,24 @@ function resize()
 	global.screen.renderer.resize(width, height);
 	$('canvas').height = 100;
 }
-
+var frame = 0;
+var startFrame = 60*1;
 function update()
 {
-	var rand = Math.floor((Math.random()*10));
+	frame++;
+	if(frame<=startFrame){
+		if(frame==startFrame/3){
+			global.countDown.sprite.texture = global.countDown.twoTexture
+		}else if(frame==startFrame*2/3){
+			global.countDown.sprite.texture = global.countDown.threeTexture
+		}else if(frame==startFrame){
+			global.countDown.sprite.alpha=0;
+		}
+		requestAnimFrame(update);
+	}else{
+		var rand = Math.floor((Math.random()*10));
 	var speed = Math.random()+0.5;
 	var now = new Date().getTime() / 1000;
-	resize();
 	if ((now - global.char_computer.updated) > speed){
 		if (rand == 5)
 			global.char_computer.frameAction("head");
@@ -52,5 +63,7 @@ function update()
 		else if (global.hp_computer.health == 0)
 			this.global.end_game.score("win");
 	}
+	}
+	
 	global.screen.render();
 }
