@@ -1,4 +1,4 @@
-function Character(x, y, width, height, spritePath){
+function Character(x, y, width, height, spritePath, ai){
 
 
 
@@ -23,6 +23,7 @@ function Character(x, y, width, height, spritePath){
 		} else{ //HEADBUT THAT DUDE!!
 			this.sprite.texture = this.texture_butt;
 		}
+		this.updated = new Date().getTime() / 1000;
 	}
 
 	this.setPos = function(x,y){
@@ -38,7 +39,9 @@ function Character(x, y, width, height, spritePath){
 		this.sprite.height = y;
 	}
 
-	this.position = 0
+	this.updated = new Date().getTime() / 1000;
+	this.position = "";
+
 	this.texture_middle= new PIXI.Texture.fromImage(spritePath+'/HeadHD.png');
 	this.texture_right = new PIXI.Texture.fromImage(spritePath+'/RightHD.png');
 	this.texture_left = new PIXI.Texture.fromImage(spritePath+'/LeftHD.png');

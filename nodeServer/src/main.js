@@ -24,7 +24,22 @@ function resize()
 
 function update()
 {
-	//global.character.frameAction(0);
+	var rand = Math.floor((Math.random()*10));
+	var speed = Math.random()+0.5;
+	var now = new Date().getTime() / 1000;
+	console.log(speed);
+	
+	if ((now - global.char_computer.updated) > speed){
+		//console.log(rand);
+		if (rand == 5)
+			global.char_computer.frameAction("head");
+		else if ((rand >= 7) && (rand <=9))
+			global.char_computer.frameAction("left");
+		else if ((rand >= 3) && (rand <=6))
+			global.char_computer.frameAction("right");
+		else
+			global.char_computer.frameAction("middle");
+	}
 	global.screen.render();
 	requestAnimFrame(update);
 }
