@@ -20,7 +20,7 @@ function Character(x, y, width, height, spritePath){
 		else if(command == "right"){ //change sprite lean right
 			this.sprite.texture = this.texture_right;
 			
-		}else{ //HEADBUT THAT SHIT!!
+		} else{ //HEADBUT THAT DUDE!!
 			this.sprite.texture = this.texture_butt;
 		}
 	}
