@@ -1,0 +1,120 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/root/.nvm/v0.10.15/bin/node',
+1 verbose cli   '/root/.nvm/v0.10.15/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.3.5
+3 info using node@v0.10.15
+4 warn package.json twitterHack@0.0.1 No repository field.
+5 warn package.json twitterHack@0.0.1 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/trevor/workspace/hackerNestConstruct/nodeServer',
+7 verbose install   [ 'tweet-bliss', 'request', 'dgram', 'udp4', 'socket.io' ] ]
+8 info preinstall twitterHack@0.0.1
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'dgram@x.x', null ]
+11 verbose cache add name=undefined spec="dgram@x.x" args=["dgram@x.x",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'dgram@x.x',
+12 verbose parsed url   path: 'dgram@x.x',
+12 verbose parsed url   href: 'dgram@x.x' }
+13 verbose cache add name="dgram" spec="x.x" args=["dgram","x.x"]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'x.x',
+14 verbose parsed url   path: 'x.x',
+14 verbose parsed url   href: 'x.x' }
+15 verbose addNamed [ 'dgram', 'x.x' ]
+16 verbose addNamed [ null, '*' ]
+17 verbose already installed skipping request@x.x /home/trevor/workspace/hackerNestConstruct/nodeServer
+18 verbose cache add [ 'udp4@x.x', null ]
+19 verbose cache add name=undefined spec="udp4@x.x" args=["udp4@x.x",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'udp4@x.x',
+20 verbose parsed url   path: 'udp4@x.x',
+20 verbose parsed url   href: 'udp4@x.x' }
+21 verbose cache add name="udp4" spec="x.x" args=["udp4","x.x"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'x.x',
+22 verbose parsed url   path: 'x.x',
+22 verbose parsed url   href: 'x.x' }
+23 verbose addNamed [ 'udp4', 'x.x' ]
+24 verbose addNamed [ null, '*' ]
+25 verbose already installed skipping socket.io@x.x /home/trevor/workspace/hackerNestConstruct/nodeServer
+26 verbose already installed skipping tweet-bliss@x.x /home/trevor/workspace/hackerNestConstruct/nodeServer
+27 silly lockFile ae0c3a4e-dgram-x-x dgram@x.x
+28 verbose lock dgram@x.x /root/.npm/ae0c3a4e-dgram-x-x.lock
+29 silly lockFile 6dad4beb-udp4-x-x udp4@x.x
+30 verbose lock udp4@x.x /root/.npm/6dad4beb-udp4-x-x.lock
+31 silly addNameRange { name: 'dgram', range: '*', hasData: false }
+32 silly addNameRange { name: 'udp4', range: '*', hasData: false }
+33 verbose url raw dgram
+34 verbose url resolving [ 'https://registry.npmjs.org/', './dgram' ]
+35 verbose url resolved https://registry.npmjs.org/dgram
+36 info trying registry request attempt 1 at 20:42:48
+37 http GET https://registry.npmjs.org/dgram
+38 verbose url raw udp4
+39 verbose url resolving [ 'https://registry.npmjs.org/', './udp4' ]
+40 verbose url resolved https://registry.npmjs.org/udp4
+41 info trying registry request attempt 1 at 20:42:48
+42 http GET https://registry.npmjs.org/udp4
+43 http 404 https://registry.npmjs.org/udp4
+44 silly registry.get cb [ 404,
+44 silly registry.get   { date: 'Sun, 23 Feb 2014 01:42:49 GMT',
+44 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+44 silly registry.get     'content-type': 'application/json',
+44 silly registry.get     via: '1.1 varnish',
+44 silly registry.get     'cache-control': 'max-age=0',
+44 silly registry.get     'content-length': '52',
+44 silly registry.get     'accept-ranges': 'bytes',
+44 silly registry.get     age: '0',
+44 silly registry.get     'x-served-by': 'cache-v43-ASH, cache-jfk1035-JFK',
+44 silly registry.get     'x-cache': 'MISS, MISS',
+44 silly registry.get     'x-cache-hits': '0, 0',
+44 silly registry.get     'x-timer': 'S1393119769.263823748,VS0,VS0,VE17,VE25',
+44 silly registry.get     'keep-alive': 'timeout=10, max=50',
+44 silly registry.get     connection: 'Keep-Alive' } ]
+45 silly lockFile 6dad4beb-udp4-x-x udp4@x.x
+46 silly lockFile 6dad4beb-udp4-x-x udp4@x.x
+47 error 404 'udp4' is not in the npm registry.
+47 error 404 You should bug the author to publish it
+47 error 404
+47 error 404 Note that you can also install from a
+47 error 404 tarball, folder, or http url, or git url.
+48 error System Linux 3.5.0-41-generic
+49 error command "/root/.nvm/v0.10.15/bin/node" "/root/.nvm/v0.10.15/bin/npm" "install"
+50 error cwd /home/trevor/workspace/hackerNestConstruct/nodeServer
+51 error node -v v0.10.15
+52 error npm -v 1.3.5
+53 error code E404
+54 verbose exit [ 1, true ]

@@ -73,4 +73,12 @@ io.sockets.on('connection', function (socket) {
   socket.on('my other event', function (data) {
     console.log(data);
   });*/
+  socket.on('disconnect', function () {
+    
+  });
 });
+
+require('./udp_server.js').listen(function(obj){
+  //console.log(obj);
+  io.sockets.emit('kiwi', obj);
+})
