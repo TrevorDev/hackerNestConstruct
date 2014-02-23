@@ -83,26 +83,31 @@ require('./udp_server.js').listen(function(obj){
   //console.log(obj);
   //io.sockets.emit('kiwi', obj);
   //console.log(obj.ax)
-  var thresh = 0.6;
-  if(obj.ax>thresh){
+  var thresh = 0.8;
+  var safe = 0.4;
+  if(obj.ax>thresh && obj.ay>-safe){
     if(lastPos!="left"){
       lastPos = "left";
+      console.log(lastPos);
       io.sockets.emit('kiwi', lastPos);
     }
     
-  }else if(obj.ax<-thresh){
+  }else if(obj.ax<-thresh && obj.ay>-safe){
     if(lastPos!="right"){
       lastPos = "right";
+      console.log(lastPos);
       io.sockets.emit('kiwi', lastPos);
     }
-  }else if(obj.ay<-thresh){
+  }else if(obj.ay<-thresh && obj.ax>-safe && obj.ax<safe){
     if(lastPos!="middle"){
       lastPos = "middle";
+      console.log(lastPos);
       io.sockets.emit('kiwi', lastPos);
     }
-  }else if(obj.az<-thresh){
+  }else if(obj.az<-thresh && obj.ay>-safe && obj.ax>-safe && obj.ax<safe){
     if(lastPos!="head"){
       lastPos = "head";
+      console.log(lastPos);
       io.sockets.emit('kiwi', lastPos);
     }
   }
