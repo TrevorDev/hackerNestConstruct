@@ -17,9 +17,13 @@ function Effect(effect) {
 	this.tryRemove = function(){
 		now = new Date().getTime() / 1000;
 		age = now-this.created;
-		this.sprite.alpha = 1-age
 		if (age > 1.0)
+			age = 1.0;
+		this.sprite.alpha = 1-age
+		if (age >= 1.0){
+			global.screen.container.removeChild(this.sprite);
 			return true;
+		}
 		return false;
 	}
 	
