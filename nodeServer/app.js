@@ -5,10 +5,10 @@ var http = require("http"),
     port = process.argv[2] || 8888;
 var request = require('request')
 var bliss = require('tweet-bliss').createClient({
-        consumer_key: 'Uwvepx6tB74QLytb0sg7Ng',
-        consumer_secret: 'Dy9qIa2ULxFgTf7ACvrtNqpDC9xa0WKhoezZiJf0yiE',
-        access_token_key: '942738733-LiB7TgcRvptg7iZfxw3H7jNsss6Zkt4SvLPBdH7v',
-        access_token_secret: 'umzizaOMrMVbmz0VeiaMWM8Bog8cJeqLZElPdJv9fyiIO'
+        consumer_key: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+        consumer_secret: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+        access_token_key: 'XXXXXXXXXXXXXXXXXXXXXXXXX',
+        access_token_secret: 'XXXXXXXXXXXXXXXXXXXXXXXXX'
     });
 
 
